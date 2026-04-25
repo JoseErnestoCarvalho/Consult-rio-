@@ -1,0 +1,917 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="description" content="Dra. Natiana Lemos — Odontologia Estética e Harmonização Facial em Crato, CE. Excelência em cada detalhe. Agende sua avaliação."/>
+<title>Dra. Natiana Lemos — Odontologia Estética & Harmonização Facial</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300&family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        rose:    '#854552',
+        roseDark:'#6b3742',
+        roseLight:'#d9b3b9',
+        cream:   '#faf6f2',
+        sand:    '#f0e9e1',
+        gold:    '#c9a96e',
+        charcoal:'#2b2224',
+        muted:   '#7a6669',
+      },
+      fontFamily: {
+        display: ['"Cormorant Garamond"', 'Georgia', 'serif'],
+        body:    ['"DM Sans"', 'sans-serif'],
+      },
+    },
+  },
+}
+</script>
+
+<style>
+  /* ── Reset & base ──────────────────────────────────── */
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: #faf6f2;
+    color: #2b2224;
+    font-family: 'DM Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* ── Typography ─────────────────────────────────────── */
+  .display-xl { font-family:'Cormorant Garamond',Georgia,serif; font-size: clamp(2.6rem,6vw,5rem); font-weight:500; line-height:1.1; letter-spacing:-0.02em; }
+  .display-lg { font-family:'Cormorant Garamond',Georgia,serif; font-size: clamp(2rem,4vw,3.2rem); font-weight:500; line-height:1.2; letter-spacing:-0.015em; }
+  .display-md { font-family:'Cormorant Garamond',Georgia,serif; font-size: clamp(1.5rem,3vw,2.2rem); font-weight:500; line-height:1.3; }
+  .display-sm { font-family:'Cormorant Garamond',Georgia,serif; font-size: 1.4rem; font-weight:500; line-height:1.4; }
+  .body-lg    { font-size:1.0625rem; line-height:1.75; font-weight:300; }
+  .body-md    { font-size:0.9375rem; line-height:1.7;  font-weight:300; }
+  .label      { font-size:0.6875rem; font-weight:500; letter-spacing:0.18em; text-transform:uppercase; }
+
+  /* ── Glass card ─────────────────────────────────────── */
+  .glass {
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255,255,255,0.6);
+    box-shadow: 0 8px 40px rgba(133,69,82,0.07);
+  }
+
+  /* ── Gold divider ───────────────────────────────────── */
+  .gold-line {
+    display:inline-block; width:48px; height:1px;
+    background: linear-gradient(90deg,#c9a96e,#e8c98a);
+    vertical-align: middle; margin: 0 12px;
+  }
+
+  /* ── Gradient bg for hero ───────────────────────────── */
+  .hero-gradient {
+    background: linear-gradient(145deg,#f0e9e1 0%,#faf6f2 55%,#ede0d8 100%);
+  }
+
+  /* ── Buttons ────────────────────────────────────────── */
+  .btn-primary {
+    display:inline-flex; align-items:center; gap:8px;
+    background:#854552; color:#fff;
+    padding:14px 32px; border-radius:9999px;
+    font-family:'DM Sans',sans-serif; font-weight:500;
+    font-size:0.8125rem; letter-spacing:0.12em; text-transform:uppercase;
+    box-shadow:0 12px 32px rgba(133,69,82,0.30);
+    transition: all 260ms cubic-bezier(.4,0,.2,1);
+    border:1.5px solid #854552;
+  }
+  .btn-primary:hover { background:#6b3742; transform:translateY(-2px); box-shadow:0 18px 40px rgba(133,69,82,0.38); }
+  .btn-primary:active { transform:scale(.97); }
+
+  .btn-ghost {
+    display:inline-flex; align-items:center; gap:8px;
+    background:transparent; color:#854552;
+    padding:13px 30px; border-radius:9999px;
+    font-family:'DM Sans',sans-serif; font-weight:500;
+    font-size:0.8125rem; letter-spacing:0.12em; text-transform:uppercase;
+    border:1.5px solid #854552;
+    transition: all 260ms cubic-bezier(.4,0,.2,1);
+  }
+  .btn-ghost:hover { background:rgba(133,69,82,0.07); transform:translateY(-2px); }
+
+  /* ── WhatsApp pulse ─────────────────────────────────── */
+  @keyframes waPulse {
+    0%   { box-shadow:0 0 0 0 rgba(37,211,102,.55); }
+    70%  { box-shadow:0 0 0 16px rgba(37,211,102,0); }
+    100% { box-shadow:0 0 0 0 rgba(37,211,102,0); }
+  }
+  .wa-pulse { animation: waPulse 2.4s infinite; }
+
+  /* ── Scroll reveal ──────────────────────────────────── */
+  .reveal {
+    opacity:0;
+    transform:translateY(28px);
+    transition:opacity 0.72s cubic-bezier(.4,0,.2,1), transform 0.72s cubic-bezier(.4,0,.2,1);
+  }
+  .reveal.visible { opacity:1; transform:translateY(0); }
+  .reveal-delay-1 { transition-delay:0.1s; }
+  .reveal-delay-2 { transition-delay:0.2s; }
+  .reveal-delay-3 { transition-delay:0.3s; }
+  .reveal-delay-4 { transition-delay:0.4s; }
+
+  /* ── Card hover lift ────────────────────────────────── */
+  .card-lift { transition:transform 300ms ease, box-shadow 300ms ease; }
+  .card-lift:hover { transform:translateY(-6px); box-shadow:0 20px 50px rgba(133,69,82,0.13); }
+
+  /* ── Ornamental section divider ─────────────────────── */
+  .ornament {
+    display:flex; align-items:center; justify-content:center;
+    gap:16px; margin-bottom:48px; color:#c9a96e;
+    font-family:'Cormorant Garamond',serif; font-style:italic; font-size:1.1rem;
+  }
+  .ornament::before, .ornament::after {
+    content:''; flex:1; max-width:80px; height:1px;
+    background:linear-gradient(90deg,transparent,#c9a96e,transparent);
+  }
+
+  /* ── Before/After placeholder ───────────────────────── */
+  .ba-card {
+    position:relative; border-radius:1rem; overflow:hidden;
+    background:linear-gradient(135deg,#e8ddd5 0%,#f5eee8 100%);
+    min-height:340px;
+    display:flex; align-items:flex-end;
+    border:1px solid rgba(201,169,110,0.25);
+  }
+  .ba-label {
+    position:absolute; top:16px;
+    background:rgba(133,69,82,0.88);
+    color:#fff; font-size:0.7rem;
+    letter-spacing:0.14em; text-transform:uppercase;
+    padding:5px 14px; border-radius:999px;
+    font-family:'DM Sans',sans-serif; font-weight:500;
+  }
+  .ba-placeholder-icon {
+    position:absolute; top:50%; left:50%; transform:translate(-50%,-60%);
+    color:rgba(133,69,82,0.18); font-size:6rem;
+    font-family:'Material Symbols Outlined';
+    font-variation-settings:'wght' 100;
+  }
+
+  /* ── Nav ────────────────────────────────────────────── */
+  #navbar {
+    transition: background 0.35s, box-shadow 0.35s;
+  }
+  #navbar.scrolled {
+    background:rgba(250,246,242,0.92) !important;
+    box-shadow:0 4px 32px rgba(133,69,82,0.09);
+  }
+
+  /* ── Testimonial stars ──────────────────────────────── */
+  .stars { color:#c9a96e; letter-spacing:2px; }
+
+  /* ── Section accent bg ──────────────────────────────── */
+  .section-sand { background:#f0e9e1; }
+  .section-white { background:#fff; }
+  .section-cream { background:#faf6f2; }
+
+  /* ── Image aspect ratio helper ──────────────────────── */
+  .img-portrait { aspect-ratio:3/4; object-fit:cover; border-radius:1rem; }
+
+  /* Material Symbols */
+  .material-symbols-outlined {
+    font-family:'Material Symbols Outlined';
+    font-style:normal; font-weight:normal;
+    font-size:1.5rem; line-height:1;
+    display:inline-block; white-space:nowrap;
+    word-wrap:normal; direction:ltr;
+    -webkit-font-feature-settings:'liga';
+    font-variation-settings:'FILL' 0,'wght' 200,'GRAD' 0,'opsz' 24;
+  }
+
+  /* ── Mobile menu ────────────────────────────────────── */
+  #mobile-drawer {
+    display:none;
+    position:fixed; inset:0; z-index:200;
+    background:rgba(250,246,242,0.97);
+    backdrop-filter:blur(16px);
+    padding:100px 40px 60px;
+    flex-direction:column; gap:36px;
+    align-items:center;
+  }
+  #mobile-drawer.open { display:flex; }
+  #mobile-drawer a {
+    font-family:'Cormorant Garamond',serif;
+    font-size:2rem; font-weight:500;
+    color:#2b2224; text-decoration:none;
+    letter-spacing:0.01em;
+  }
+  #mobile-drawer a:hover { color:#854552; }
+
+  /* Overlap accent circle in hero */
+  .hero-circle {
+    position:absolute; right:-80px; top:10%;
+    width:520px; height:520px; border-radius:50%;
+    background:radial-gradient(circle at 40% 40%,#e8c98a22,transparent 70%);
+    border:1px solid rgba(201,169,110,0.18);
+    pointer-events:none;
+  }
+  .hero-circle-2 {
+    position:absolute; right:60px; top:30%;
+    width:300px; height:300px; border-radius:50%;
+    background:radial-gradient(circle,#854552 0%,transparent 60%);
+    opacity:0.05;
+    pointer-events:none;
+  }
+</style>
+</head>
+
+<body>
+
+<!-- ═══════════════════════════════════════════════
+     NAVBAR
+═══════════════════════════════════════════════ -->
+<nav id="navbar" class="fixed top-0 w-full z-50 backdrop-blur-xl bg-transparent">
+  <div class="max-w-7xl mx-auto px-6 md:px-10 h-20 flex justify-between items-center">
+
+    <!-- Logo -->
+    <a href="#" class="flex flex-col leading-none" aria-label="Dra. Natiana Lemos — início">
+      <span class="font-display text-[1.35rem] text-[#854552] italic tracking-tight">Dra. Natiana Lemos</span>
+      <span class="label text-[#c9a96e] tracking-[0.2em] text-[0.6rem] mt-0.5">Odontologia & Harmonização Facial</span>
+    </a>
+
+    <!-- Desktop links -->
+    <div class="hidden md:flex items-center gap-8">
+      <a href="#tratamentos" class="body-md text-charcoal/70 hover:text-[#854552] transition-colors duration-200">Tratamentos</a>
+      <a href="#diferenciais" class="body-md text-charcoal/70 hover:text-[#854552] transition-colors duration-200">Diferenciais</a>
+      <a href="#antes-depois" class="body-md text-charcoal/70 hover:text-[#854552] transition-colors duration-200">Antes & Depois</a>
+      <a href="#depoimentos" class="body-md text-charcoal/70 hover:text-[#854552] transition-colors duration-200">Depoimentos</a>
+      <a href="https://wa.me/5588999339429?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o+com+a+Dra.+Natiana." target="_blank" rel="noopener" class="btn-primary">
+        Agendar Avaliação
+      </a>
+    </div>
+
+    <!-- Hamburger -->
+    <button id="hamburger" aria-label="Abrir menu" aria-expanded="false" class="md:hidden text-[#854552] z-[201] relative">
+      <span id="ham-icon" class="material-symbols-outlined" style="font-size:28px;">menu</span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile Drawer -->
+<div id="mobile-drawer" role="dialog" aria-modal="true" aria-label="Menu de navegação">
+  <button id="drawer-close" aria-label="Fechar menu" class="absolute top-6 right-6 text-[#854552]">
+    <span class="material-symbols-outlined" style="font-size:30px;">close</span>
+  </button>
+  <a href="#tratamentos" class="drawer-link">Tratamentos</a>
+  <a href="#diferenciais" class="drawer-link">Diferenciais</a>
+  <a href="#antes-depois" class="drawer-link">Antes & Depois</a>
+  <a href="#depoimentos" class="drawer-link">Depoimentos</a>
+  <a href="#contato" class="drawer-link">Contato</a>
+  <a href="https://wa.me/5588999339429?text=Ol%C3%A1%2C+gostaria+de+agendar+minha+avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn-primary mt-4 text-center justify-center">
+    Agendar Avaliação
+  </a>
+</div>
+
+
+<!-- ═══════════════════════════════════════════════
+     HERO
+═══════════════════════════════════════════════ -->
+<section class="relative hero-gradient min-h-screen flex items-center pt-20 overflow-hidden">
+
+  <!-- Decorative circles -->
+  <div class="hero-circle"></div>
+  <div class="hero-circle-2"></div>
+
+  <!-- Subtle grain texture overlay -->
+  <div class="absolute inset-0 opacity-[0.025] pointer-events-none" style="background-image:url('data:image/svg+xml,%3Csvg viewBox=%220 0 200 200%22 xmlns=%22http://www.w3.org/2000/svg%22%3E%3Cfilter id=%22n%22%3E%3CfeTurbulence type=%22fractalNoise%22 baseFrequency=%220.75%22 numOctaves=%224%22 stitchTiles=%22stitch%22/%3E%3C/filter%3E%3Crect width=%22100%25%22 height=%22100%25%22 filter=%22url(%23n)%22/%3E%3C/svg%3E'); background-size:200px;"></div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10 w-full grid grid-cols-1 lg:grid-cols-2 gap-16 items-center py-24">
+
+    <!-- Copy column -->
+    <div>
+      <div class="ornament mb-8 justify-start">
+        <span class="gold-line" style="margin-left:0;"></span>
+        <span class="label text-[#c9a96e]">Crato, Ceará · Atendimento Premium</span>
+      </div>
+
+      <h1 class="display-xl text-charcoal mb-6" style="font-style:italic;">
+        Excelência em<br/>
+        <span style="color:#854552;">cada detalhe</span><br/>
+        do seu sorriso.
+      </h1>
+
+      <p class="body-lg text-muted max-w-lg mb-10">
+        A união entre ciência odontológica e olhar estético refinado para transformar sorrisos, realçar sua beleza e revelar sua melhor versão — com naturalidade, segurança e sofisticação.
+      </p>
+
+      <div class="flex flex-wrap gap-4 mb-14">
+        <a href="https://wa.me/5588999339429?text=Ol%C3%A1%2C+gostaria+de+agendar+uma+avalia%C3%A7%C3%A3o+com+a+Dra.+Natiana." target="_blank" rel="noopener" class="btn-primary">
+          <span class="material-symbols-outlined" style="font-size:18px;">calendar_month</span>
+          Agendar Avaliação Gratuita
+        </a>
+        <a href="#tratamentos" class="btn-ghost">
+          Conhecer Tratamentos
+          <span class="material-symbols-outlined" style="font-size:16px;">arrow_downward</span>
+        </a>
+      </div>
+
+      <!-- Trust badges -->
+      <div class="flex flex-wrap gap-8">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#854552]/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-[#854552]" style="font-size:18px;">verified</span>
+          </div>
+          <div>
+            <p class="label text-charcoal/50 mb-0.5">CRO Certificado</p>
+            <p class="body-md text-charcoal font-medium" style="font-weight:500;">Profissional Habilitada</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#854552]/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-[#854552]" style="font-size:18px;">favorite</span>
+          </div>
+          <div>
+            <p class="label text-charcoal/50 mb-0.5">Pacientes Satisfeitas</p>
+            <p class="body-md text-charcoal font-medium" style="font-weight:500;">+500 transformações</p>
+          </div>
+        </div>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#854552]/10 flex items-center justify-center flex-shrink-0">
+            <span class="material-symbols-outlined text-[#854552]" style="font-size:18px;">stars</span>
+          </div>
+          <div>
+            <p class="label text-charcoal/50 mb-0.5">Avaliação</p>
+            <p class="body-md text-charcoal font-medium" style="font-weight:500;">5.0 ⭐ Google</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Visual column -->
+    <div class="relative hidden lg:flex items-center justify-center">
+      <!-- Decorative frame -->
+      <div class="absolute -inset-6 rounded-[2rem] border border-[#c9a96e]/20 rotate-2"></div>
+      <div class="absolute -inset-3 rounded-[1.75rem] border border-[#854552]/10 -rotate-1"></div>
+
+      <div class="relative glass rounded-[1.5rem] p-10 text-center max-w-sm shadow-2xl shadow-[#854552]/10">
+        <div class="w-24 h-24 rounded-full bg-gradient-to-br from-[#d9b3b9] to-[#854552]/40 flex items-center justify-center mx-auto mb-6">
+          <span class="material-symbols-outlined text-white" style="font-size:48px;font-variation-settings:'wght' 100;">face_retouching_natural</span>
+        </div>
+        <p class="display-sm text-charcoal mb-3 italic">"Sua melhor versão começa com um sorriso que reflete quem você é."</p>
+        <div class="flex items-center justify-center gap-2 mt-4">
+          <div class="w-8 h-[1px] bg-[#c9a96e]"></div>
+          <span class="label text-[#c9a96e]">Dra. Natiana Lemos</span>
+          <div class="w-8 h-[1px] bg-[#c9a96e]"></div>
+        </div>
+        <!-- Cards floating -->
+        <div class="absolute -bottom-6 -left-6 glass rounded-xl px-4 py-3 flex items-center gap-2 shadow-lg">
+          <span class="material-symbols-outlined text-[#854552]" style="font-size:18px;">schedule</span>
+          <span class="body-md text-charcoal" style="font-size:0.8rem;font-weight:500;">Resposta em minutos</span>
+        </div>
+        <div class="absolute -top-6 -right-6 glass rounded-xl px-4 py-3 flex items-center gap-2 shadow-lg">
+          <span class="material-symbols-outlined text-[#c9a96e]" style="font-size:18px;">star</span>
+          <span class="body-md text-charcoal" style="font-size:0.8rem;font-weight:500;">Nota 5.0</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- Wave divider -->
+  <div class="absolute bottom-0 left-0 w-full overflow-hidden leading-none" style="height:60px;">
+    <svg viewBox="0 0 1440 60" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%;display:block;">
+      <path d="M0,30 C360,60 1080,0 1440,30 L1440,60 L0,60 Z" fill="#fff"/>
+    </svg>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     TRATAMENTOS
+═══════════════════════════════════════════════ -->
+<section id="tratamentos" class="py-28 section-white">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+
+    <div class="text-center mb-16 reveal">
+      <div class="ornament">
+        <span>✦</span>
+        <span class="label text-[#c9a96e]">O que oferecemos</span>
+        <span>✦</span>
+      </div>
+      <h2 class="display-lg text-charcoal mb-4">Tratamentos de Alta Performance</h2>
+      <p class="body-lg text-muted max-w-xl mx-auto">Protocolos personalizados que unem precisão clínica, tecnologia de ponta e um olhar estético verdadeiramente refinado.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+
+      <!-- Card 1 -->
+      <div class="glass rounded-2xl p-8 card-lift reveal reveal-delay-1">
+        <div class="w-14 h-14 rounded-2xl bg-[#854552]/10 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-[#854552]" style="font-size:28px;font-variation-settings:'wght' 200;">face</span>
+        </div>
+        <div class="w-8 h-[1px] bg-[#c9a96e] mb-4"></div>
+        <h3 class="display-sm text-charcoal mb-3">Harmonização Facial</h3>
+        <p class="body-md text-muted mb-6 leading-relaxed">Técnicas elegantes e precisas para equilibrar seus traços, valorizar sua naturalidade e rejuvenescer com sutil sofisticação.</p>
+        <a href="https://wa.me/5588999339429?text=Gostaria+de+saber+mais+sobre+Harmoniza%C3%A7%C3%A3o+Facial." target="_blank" rel="noopener" class="label text-[#854552] hover:text-[#6b3742] transition-colors flex items-center gap-1">
+          Saber mais <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="glass rounded-2xl p-8 card-lift reveal reveal-delay-2">
+        <div class="w-14 h-14 rounded-2xl bg-[#854552]/10 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-[#854552]" style="font-size:28px;font-variation-settings:'wght' 200;">dentistry</span>
+        </div>
+        <div class="w-8 h-[1px] bg-[#c9a96e] mb-4"></div>
+        <h3 class="display-sm text-charcoal mb-3">Odontologia Estética</h3>
+        <p class="body-md text-muted mb-6 leading-relaxed">Procedimentos de última geração para um sorriso harmônico, sofisticado e perfeitamente alinhado ao seu estilo de vida.</p>
+        <a href="https://wa.me/5588999339429?text=Gostaria+de+saber+mais+sobre+Odontologia+Est%C3%A9tica." target="_blank" rel="noopener" class="label text-[#854552] hover:text-[#6b3742] transition-colors flex items-center gap-1">
+          Saber mais <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="glass rounded-2xl p-8 card-lift reveal reveal-delay-3">
+        <div class="w-14 h-14 rounded-2xl bg-[#854552]/10 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-[#854552]" style="font-size:28px;font-variation-settings:'wght' 200;">auto_awesome</span>
+        </div>
+        <div class="w-8 h-[1px] bg-[#c9a96e] mb-4"></div>
+        <h3 class="display-sm text-charcoal mb-3">Lentes de Contato Dentais</h3>
+        <p class="body-md text-muted mb-6 leading-relaxed">Lâminas ultrafinas e totalmente personalizadas para transformar seu sorriso com naturalidade e longevidade incomparáveis.</p>
+        <a href="https://wa.me/5588999339429?text=Gostaria+de+saber+mais+sobre+Lentes+de+Contato+Dentais." target="_blank" rel="noopener" class="label text-[#854552] hover:text-[#6b3742] transition-colors flex items-center gap-1">
+          Saber mais <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
+        </a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="glass rounded-2xl p-8 card-lift reveal reveal-delay-4">
+        <div class="w-14 h-14 rounded-2xl bg-[#854552]/10 flex items-center justify-center mb-6">
+          <span class="material-symbols-outlined text-[#854552]" style="font-size:28px;font-variation-settings:'wght' 200;">health_and_safety</span>
+        </div>
+        <div class="w-8 h-[1px] bg-[#c9a96e] mb-4"></div>
+        <h3 class="display-sm text-charcoal mb-3">Ortodontia Moderna</h3>
+        <p class="body-md text-muted mb-6 leading-relaxed">Soluções discretas e eficientes para alinhar dentes e mordida, promovendo estética, saúde e função em perfeita harmonia.</p>
+        <a href="https://wa.me/5588999339429?text=Gostaria+de+saber+mais+sobre+Ortodontia." target="_blank" rel="noopener" class="label text-[#854552] hover:text-[#6b3742] transition-colors flex items-center gap-1">
+          Saber mais <span class="material-symbols-outlined" style="font-size:14px;">arrow_forward</span>
+        </a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     DIFERENCIAIS
+═══════════════════════════════════════════════ -->
+<section id="diferenciais" class="py-28 section-sand relative overflow-hidden">
+
+  <!-- Decorative background text -->
+  <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 font-display text-[12rem] font-bold text-[#854552]/[0.025] whitespace-nowrap pointer-events-none select-none leading-none">
+    EXCELÊNCIA
+  </div>
+
+  <div class="relative z-10 max-w-7xl mx-auto px-6 md:px-10">
+
+    <div class="text-center mb-16 reveal">
+      <div class="ornament">
+        <span>✦</span>
+        <span class="label text-[#c9a96e]">Por que nos escolher</span>
+        <span>✦</span>
+      </div>
+      <h2 class="display-lg text-charcoal mb-4">Os Diferenciais da Dra. Natiana</h2>
+      <p class="body-lg text-muted max-w-xl mx-auto">Cada atendimento é pensado para entregar resultados elegantes, seguros e profundamente alinhados à sua identidade única.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+
+      <div class="reveal reveal-delay-1 glass rounded-2xl p-10 card-lift text-center">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#d9b3b9] to-[#854552] flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#854552]/20">
+          <span class="material-symbols-outlined text-white" style="font-size:28px;font-variation-settings:'wght' 200;">precision_manufacturing</span>
+        </div>
+        <h3 class="display-sm text-charcoal mb-3">Tecnologia de Ponta</h3>
+        <p class="body-md text-muted leading-relaxed">Equipamentos de última geração para maior previsibilidade clínica, conforto superior durante os procedimentos e resultados que superam expectativas.</p>
+      </div>
+
+      <div class="reveal reveal-delay-2 glass rounded-2xl p-10 card-lift text-center">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#d9b3b9] to-[#854552] flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#854552]/20">
+          <span class="material-symbols-outlined text-white" style="font-size:28px;font-variation-settings:'wght' 200;">spa</span>
+        </div>
+        <h3 class="display-sm text-charcoal mb-3">Conforto & Acolhimento</h3>
+        <p class="body-md text-muted leading-relaxed">Ambiente cuidadosamente pensado para proporcionar uma experiência tranquila, acolhedora e completamente livre de ansiedade desde a chegada.</p>
+      </div>
+
+      <div class="reveal reveal-delay-3 glass rounded-2xl p-10 card-lift text-center">
+        <div class="w-16 h-16 rounded-full bg-gradient-to-br from-[#d9b3b9] to-[#854552] flex items-center justify-center mx-auto mb-6 shadow-lg shadow-[#854552]/20">
+          <span class="material-symbols-outlined text-white" style="font-size:28px;font-variation-settings:'wght' 200;">person_celebrate</span>
+        </div>
+        <h3 class="display-sm text-charcoal mb-3">Experiência Personalizada</h3>
+        <p class="body-md text-muted leading-relaxed">Planejamento exclusivo com diagnóstico individual, atenção total aos seus objetivos e resultados que respeitam e realçam sua identidade natural.</p>
+      </div>
+
+    </div>
+
+    <!-- Stats strip -->
+    <div class="glass rounded-2xl p-10 reveal">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+        <div>
+          <p class="display-lg text-[#854552]" style="font-style:italic;">500<span style="font-size:1.5rem;">+</span></p>
+          <p class="label text-muted mt-1">Pacientes Atendidas</p>
+        </div>
+        <div>
+          <p class="display-lg text-[#854552]" style="font-style:italic;">8<span style="font-size:1.5rem;">+</span></p>
+          <p class="label text-muted mt-1">Anos de Experiência</p>
+        </div>
+        <div>
+          <p class="display-lg text-[#854552]" style="font-style:italic;">5.0</p>
+          <p class="label text-muted mt-1">Avaliação no Google</p>
+        </div>
+        <div>
+          <p class="display-lg text-[#854552]" style="font-style:italic;">100<span style="font-size:1.5rem;">%</span></p>
+          <p class="label text-muted mt-1">Satisfação Garantida</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     ANTES & DEPOIS
+═══════════════════════════════════════════════ -->
+<section id="antes-depois" class="py-28 section-white">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+
+    <div class="text-center mb-16 reveal">
+      <div class="ornament">
+        <span>✦</span>
+        <span class="label text-[#c9a96e]">Resultados reais</span>
+        <span>✦</span>
+      </div>
+      <h2 class="display-lg text-charcoal mb-4">Antes & Depois</h2>
+      <p class="body-lg text-muted max-w-xl mx-auto">Cada transformação é única. Resultados discretos ou impactantes — sempre com elegância e respeito à sua essência.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <!-- BA Card 1 -->
+      <div class="reveal reveal-delay-1 card-lift">
+        <div class="ba-card">
+          <span class="ba-label left-4">Antes & Depois</span>
+          <span class="ba-placeholder-icon">dentistry</span>
+          <div class="glass w-full p-6 relative z-10">
+            <p class="display-sm text-charcoal mb-1">Lentes de Contato</p>
+            <p class="body-md text-muted">Transformação completa do sorriso com lentes ultrafinas porcelana.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BA Card 2 -->
+      <div class="reveal reveal-delay-2 card-lift">
+        <div class="ba-card" style="background:linear-gradient(135deg,#ede0d8 0%,#faf6f2 100%);">
+          <span class="ba-label left-4">Antes & Depois</span>
+          <span class="ba-placeholder-icon">face</span>
+          <div class="glass w-full p-6 relative z-10">
+            <p class="display-sm text-charcoal mb-1">Harmonização Facial</p>
+            <p class="body-md text-muted">Equilíbrio e rejuvenescimento dos traços com técnicas de precisão.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- BA Card 3 -->
+      <div class="reveal reveal-delay-3 card-lift">
+        <div class="ba-card" style="background:linear-gradient(135deg,#f5eee8 0%,#e8ddd5 100%);">
+          <span class="ba-label left-4">Antes & Depois</span>
+          <span class="ba-placeholder-icon">auto_awesome</span>
+          <div class="glass w-full p-6 relative z-10">
+            <p class="display-sm text-charcoal mb-1">Clareamento Premium</p>
+            <p class="body-md text-muted">Dentes brancos e saudáveis com protocolo exclusivo de clareamento.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- CTA block -->
+    <div class="text-center mt-12 reveal">
+      <p class="body-lg text-muted mb-6 italic font-display" style="font-size:1.2rem;">"Sua transformação começa com uma conversa."</p>
+      <a href="https://wa.me/5588999339429?text=Quero+ver+mais+resultados+e+agendar+minha+avalia%C3%A7%C3%A3o." target="_blank" rel="noopener" class="btn-primary">
+        <span class="material-symbols-outlined" style="font-size:18px;">photo_camera</span>
+        Ver Mais Resultados no Instagram
+      </a>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     DEPOIMENTOS
+═══════════════════════════════════════════════ -->
+<section id="depoimentos" class="py-28 section-sand">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+
+    <div class="text-center mb-16 reveal">
+      <div class="ornament">
+        <span>✦</span>
+        <span class="label text-[#c9a96e]">O que dizem nossas pacientes</span>
+        <span>✦</span>
+      </div>
+      <h2 class="display-lg text-charcoal mb-4">Depoimentos</h2>
+      <p class="body-lg text-muted max-w-xl mx-auto">Histórias reais de quem confiou à Dra. Natiana o cuidado do seu sorriso e da sua autoestima.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+
+      <article class="glass rounded-2xl p-8 card-lift reveal reveal-delay-1">
+        <p class="stars mb-4">★★★★★</p>
+        <p class="body-lg text-charcoal/80 mb-6 font-display italic" style="font-size:1.1rem;line-height:1.6;">"Me senti acolhida desde o primeiro contato. O resultado ficou extremamente natural e elegante — exatamente o que eu sonhava."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#d9b3b9] flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#854552]" style="font-size:20px;">person</span>
+          </div>
+          <div>
+            <p class="body-md text-charcoal" style="font-weight:500;">Mariana S.</p>
+            <p class="label text-muted">Harmonização Facial</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass rounded-2xl p-8 card-lift reveal reveal-delay-2">
+        <p class="stars mb-4">★★★★★</p>
+        <p class="body-lg text-charcoal/80 mb-6 font-display italic" style="font-size:1.1rem;line-height:1.6;">"As lentes transformaram completamente meu sorriso. Atendimento técnico, humano e impecável em cada etapa do processo."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#d9b3b9] flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#854552]" style="font-size:20px;">person</span>
+          </div>
+          <div>
+            <p class="body-md text-charcoal" style="font-weight:500;">Fernanda R.</p>
+            <p class="label text-muted">Lentes de Contato Dentais</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="glass rounded-2xl p-8 card-lift reveal reveal-delay-3">
+        <p class="stars mb-4">★★★★★</p>
+        <p class="body-lg text-charcoal/80 mb-6 font-display italic" style="font-size:1.1rem;line-height:1.6;">"Estrutura moderna, ambiente acolhedor e profissionalismo em cada detalhe. Minha experiência superou todas as expectativas."</p>
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-[#d9b3b9] flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#854552]" style="font-size:20px;">person</span>
+          </div>
+          <div>
+            <p class="body-md text-charcoal" style="font-weight:500;">Juliana M.</p>
+            <p class="label text-muted">Odontologia Estética</p>
+          </div>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     CONTATO & HORÁRIOS
+═══════════════════════════════════════════════ -->
+<section id="contato" class="py-28 section-white">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+
+    <div class="text-center mb-16 reveal">
+      <div class="ornament">
+        <span>✦</span>
+        <span class="label text-[#c9a96e]">Estamos aqui por você</span>
+        <span>✦</span>
+      </div>
+      <h2 class="display-lg text-charcoal mb-4">Contato & Localização</h2>
+      <p class="body-lg text-muted max-w-xl mx-auto">Pronta para cuidar de você. Agende sua avaliação e dê o primeiro passo para a sua melhor versão.</p>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+      <!-- Contact card -->
+      <div class="glass rounded-2xl p-10 reveal reveal-delay-1 card-lift">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-12 h-12 rounded-xl bg-[#854552]/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#854552]" style="font-size:24px;">location_on</span>
+          </div>
+          <div>
+            <p class="label text-muted">Endereço</p>
+            <p class="body-md text-charcoal" style="font-weight:500;">Rua Dom Quintino, 777 — Centro, Crato - CE</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-12 h-12 rounded-xl bg-[#854552]/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#854552]" style="font-size:24px;">phone</span>
+          </div>
+          <div>
+            <p class="label text-muted">WhatsApp</p>
+            <p class="body-md text-charcoal" style="font-weight:500;">(88) 99933-9429</p>
+          </div>
+        </div>
+
+        <div class="flex items-center gap-3 mb-10">
+          <div class="w-12 h-12 rounded-xl bg-[#854552]/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#854552]" style="font-size:24px;">photo_camera</span>
+          </div>
+          <div>
+            <p class="label text-muted">Instagram</p>
+            <a href="https://www.instagram.com/dranatianalemos/" target="_blank" rel="noopener" class="body-md text-[#854552] hover:text-[#6b3742] transition-colors" style="font-weight:500;">@dranatianalemos</a>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap gap-4">
+          <a href="https://wa.me/5588999339429?text=Ol%C3%A1%2C+gostaria+de+agendar+meu+atendimento." target="_blank" rel="noopener" class="btn-primary">
+            <span class="material-symbols-outlined" style="font-size:18px;">chat</span>
+            Falar no WhatsApp
+          </a>
+          <a href="https://maps.google.com/?q=Rua+Dom+Quintino,+777+-+Centro,+Crato+-+CE" target="_blank" rel="noopener" class="btn-ghost">
+            Ver no Mapa
+          </a>
+        </div>
+      </div>
+
+      <!-- Hours card -->
+      <div class="glass rounded-2xl p-10 reveal reveal-delay-2 card-lift">
+        <div class="flex items-center gap-3 mb-8">
+          <div class="w-12 h-12 rounded-xl bg-[#854552]/10 flex items-center justify-center">
+            <span class="material-symbols-outlined text-[#854552]" style="font-size:24px;">schedule</span>
+          </div>
+          <h3 class="display-sm text-charcoal">Horários de Atendimento</h3>
+        </div>
+
+        <div class="space-y-4 mb-8">
+          <div class="flex justify-between items-center py-3 border-b border-[#c9a96e]/20">
+            <span class="body-md text-charcoal" style="font-weight:500;">Segunda a Sexta</span>
+            <span class="body-md text-muted">08h00 – 11h30 · 14h00 – 17h00</span>
+          </div>
+          <div class="flex justify-between items-center py-3 border-b border-[#c9a96e]/20">
+            <span class="body-md text-charcoal" style="font-weight:500;">Sábado</span>
+            <span class="label text-muted bg-[#f0e9e1] px-3 py-1 rounded-full">Fechado</span>
+          </div>
+          <div class="flex justify-between items-center py-3">
+            <span class="body-md text-charcoal" style="font-weight:500;">Domingo</span>
+            <span class="label text-muted bg-[#f0e9e1] px-3 py-1 rounded-full">Fechado</span>
+          </div>
+        </div>
+
+        <div class="rounded-xl bg-[#854552]/5 border border-[#854552]/15 p-5">
+          <div class="flex items-start gap-3">
+            <span class="material-symbols-outlined text-[#854552]" style="font-size:20px;margin-top:2px;">info</span>
+            <p class="body-md text-muted">Também atendemos por <strong class="text-charcoal">encaixes</strong>, conforme disponibilidade da agenda. Entre em contato pelo WhatsApp para verificar horários disponíveis.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     CTA FINAL STRIP
+═══════════════════════════════════════════════ -->
+<section class="py-24" style="background:linear-gradient(135deg,#854552 0%,#6b3742 100%);">
+  <div class="max-w-4xl mx-auto px-6 md:px-10 text-center reveal">
+    <p class="label text-white/60 mb-4">Dê o primeiro passo</p>
+    <h2 class="display-lg text-white mb-6" style="font-style:italic;">Sua melhor versão está a um clique de distância.</h2>
+    <p class="body-lg text-white/75 mb-10 max-w-xl mx-auto">Agende sua avaliação gratuita e descubra o tratamento ideal para o seu sorriso e para a sua autoestima.</p>
+    <a href="https://wa.me/5588999339429?text=Ol%C3%A1%2C+quero+agendar+minha+avalia%C3%A7%C3%A3o+gratuita+com+a+Dra.+Natiana." target="_blank" rel="noopener"
+       style="display:inline-flex;align-items:center;gap:10px;background:#fff;color:#854552;padding:16px 40px;border-radius:9999px;font-family:'DM Sans',sans-serif;font-weight:600;font-size:0.875rem;letter-spacing:0.12em;text-transform:uppercase;box-shadow:0 12px 40px rgba(0,0,0,0.2);transition:all 260ms ease;border:1.5px solid rgba(255,255,255,0.3);"
+       onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 18px 50px rgba(0,0,0,0.3)'"
+       onmouseout="this.style.transform='';this.style.boxShadow='0 12px 40px rgba(0,0,0,0.2)'">
+      <span class="material-symbols-outlined" style="font-size:20px;">chat</span>
+      Agendar Minha Avaliação
+    </a>
+  </div>
+</section>
+
+
+<!-- ═══════════════════════════════════════════════
+     FOOTER
+═══════════════════════════════════════════════ -->
+<footer class="bg-charcoal text-white/60 pt-16 pb-8">
+  <div class="max-w-7xl mx-auto px-6 md:px-10">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
+      <div>
+        <p class="font-display text-white text-xl italic mb-2">Dra. Natiana Lemos</p>
+        <p class="label text-[#c9a96e] mb-4">Odontologia Estética & Harmonização Facial</p>
+        <p class="body-md leading-relaxed">Excelência em cada detalhe. Transformando sorrisos e realçando sua beleza com naturalidade e sofisticação em Crato, CE.</p>
+      </div>
+      <div>
+        <p class="label text-white mb-5">Navegação</p>
+        <nav class="space-y-3">
+          <a href="#tratamentos" class="block body-md hover:text-white transition-colors">Tratamentos</a>
+          <a href="#diferenciais" class="block body-md hover:text-white transition-colors">Diferenciais</a>
+          <a href="#antes-depois" class="block body-md hover:text-white transition-colors">Antes & Depois</a>
+          <a href="#depoimentos" class="block body-md hover:text-white transition-colors">Depoimentos</a>
+          <a href="#contato" class="block body-md hover:text-white transition-colors">Contato</a>
+        </nav>
+      </div>
+      <div>
+        <p class="label text-white mb-5">Contato</p>
+        <div class="space-y-3">
+          <p class="body-md">Rua Dom Quintino, 777<br/>Centro, Crato — CE, 63100-070</p>
+          <a href="https://wa.me/5588999339429" target="_blank" rel="noopener" class="body-md hover:text-white transition-colors block">(88) 99933-9429</a>
+          <a href="https://www.instagram.com/dranatianalemos/" target="_blank" rel="noopener" class="body-md hover:text-white transition-colors block">@dranatianalemos</a>
+        </div>
+      </div>
+    </div>
+    <div class="border-t border-white/10 pt-8 flex flex-wrap justify-between items-center gap-4">
+      <p class="body-md text-white/40">© 2026 Dra. Natiana Lemos. Todos os direitos reservados.</p>
+      <div class="flex gap-6">
+        <a href="#" class="body-md text-white/40 hover:text-white transition-colors">Política de Privacidade</a>
+        <a href="#" class="body-md text-white/40 hover:text-white transition-colors">Termos de Uso</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+<!-- ═══════════════════════════════════════════════
+     FLOATING WHATSAPP
+═══════════════════════════════════════════════ -->
+<a href="https://wa.me/5588999339429?text=Ol%C3%A1%2C+gostaria+de+falar+com+a+Dra.+Natiana." target="_blank" rel="noopener" aria-label="Falar com a Dra. Natiana no WhatsApp"
+   class="fixed bottom-6 right-6 z-50 group flex flex-col items-end gap-2">
+
+  <!-- Tooltip -->
+  <span style="background:#2b2224;color:#fff;font-family:'DM Sans',sans-serif;font-size:0.75rem;padding:6px 14px;border-radius:8px;opacity:0;transform:translateX(8px);transition:all 220ms ease;pointer-events:none;white-space:nowrap;"
+        class="group-hover:opacity-100 group-hover:translate-x-0 hidden sm:block">
+    Falar com a Dra. Natiana ✨
+  </span>
+
+  <!-- Button -->
+  <span class="wa-pulse w-14 h-14 rounded-full flex items-center justify-center shadow-xl"
+        style="background:#25D366;box-shadow:0 8px 28px rgba(37,211,102,0.45);">
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="white" xmlns="http://www.w3.org/2000/svg">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </span>
+</a>
+
+
+<!-- ═══════════════════════════════════════════════
+     JAVASCRIPT
+═══════════════════════════════════════════════ -->
+<script>
+  // ── Navbar scroll effect ──
+  var navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 40) { navbar.classList.add('scrolled'); }
+    else { navbar.classList.remove('scrolled'); }
+  });
+
+  // ── Mobile drawer ──
+  var hamburger = document.getElementById('hamburger');
+  var hamIcon   = document.getElementById('ham-icon');
+  var drawer    = document.getElementById('mobile-drawer');
+  var drawerClose = document.getElementById('drawer-close');
+
+  function openDrawer() {
+    drawer.classList.add('open');
+    hamIcon.textContent = 'close';
+    hamburger.setAttribute('aria-expanded','true');
+    document.body.style.overflow = 'hidden';
+  }
+  function closeDrawer() {
+    drawer.classList.remove('open');
+    hamIcon.textContent = 'menu';
+    hamburger.setAttribute('aria-expanded','false');
+    document.body.style.overflow = '';
+  }
+
+  hamburger.addEventListener('click', function() {
+    drawer.classList.contains('open') ? closeDrawer() : openDrawer();
+  });
+  drawerClose.addEventListener('click', closeDrawer);
+
+  // Close drawer on link click
+  document.querySelectorAll('.drawer-link').forEach(function(link) {
+    link.addEventListener('click', closeDrawer);
+  });
+
+  // Close on ESC
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') closeDrawer();
+  });
+
+  // ── Scroll reveal with IntersectionObserver ──
+  var reveals = document.querySelectorAll('.reveal');
+  var observer = new IntersectionObserver(function(entries) {
+    entries.forEach(function(entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+  reveals.forEach(function(el) { observer.observe(el); });
+</script>
+
+</body>
+</html>
